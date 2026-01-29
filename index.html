@@ -5,108 +5,130 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="UDfKbGoXH2h61VZL6j15EVBaaspOvkNeq98kAHIxQAk" />
     <meta name="description" content="The Official SSBU Rice Purity Test. How pure of a smash player are you?">
-    <style>
-        body {
-            font-family: 'Times New Roman', serif;
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 0 20px;
-            background-color: #fdeec7;
-            background-image: url('background.png');
-            background-repeat: repeat;
-            text-align: left;
-        }
+   <style>
+    body {
+        font-family: 'Times New Roman', serif;
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 0 20px;
+        background-color: #fdeec7;
+        background-image: url('background.png');
+        background-repeat: repeat;
+        text-align: left;
+    }
+    
+    h2 {
+        color: #bb1414;
+        font-size: 64px;
+        margin-bottom: 5px;
+        text-align: center;
+    }
+    
+    .subtitle {
+        color: #000000;
+        font-size: 32px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    
+    #checkboxes {
+        text-align: left;
+    }
+    
+    .checkbox-item {
+        margin: 5px 0;
+        text-align: left;
+        display: flex;
+        align-items: flex-start;
+        gap: 8px;
+        justify-content: flex-start;
+    }
+    
+    .checkbox-item .number {
+        min-width: 30px;
+        flex-shrink: 0;
+        text-align: right;
+    }
+    
+    .checkbox-item input[type="checkbox"] {
+        flex-shrink: 0;
+        margin-top: 3px;
+    }
+    
+    .checkbox-item label {
+        flex: 1;
+        font-family: 'Times New Roman', serif;
+        font-size: 24px;
+    }
+    
+    button {
+        padding: 10px 20px;
+        font-size: 16px;
+        margin-top: 20px;
+    }
+    
+    #result {
+        margin-top: 10px;
+        font-weight: bold;
+    }
+    
+    /* Results page styles */
+    .results-page {
+        display: none;
+        text-align: center;
+        padding: 50px 20px;
+    }
+    
+    .results-page.active {
+        display: block;
+    }
+    
+    .score-label {
+        font-size: 24px;
+        color: #000000;
+        margin-bottom: 20px;
+    }
+    
+    .score-number {
+        font-size: 120px;
+        font-weight: bold;
+        color: #bb1414;
+        margin: 20px 0;
+    }
+    
+    .made-by {
+        font-size: 18px;
+        color: #000000;
+        margin-top: 50px;
+    }
+    
+    .back-button {
+        margin-top: 30px;
+    }
+    
+    .main-page.hidden {
+        display: none;
+    }
+    
+    /* Mobile styles */
     @media (max-width: 600px) {
         body {
-        font-size: 16px;
+            font-size: 16px;
         }
         h2 {
-        font-size: 24px;
-        text-align: center;
-        }
-        .score-number {
-        font-size: 80px;
-        }
-    }
-        h2 {
-            color: #bb1414;
-            font-size: 64px;
-            margin-bottom: 5px;
-            text-align: center;
+            font-size: 24px;
         }
         .subtitle {
-            color: #000000;
-            font-size: 32px;
-            margin-bottom: 20px;
-            text-align: center;
-        }
-        .checkbox-item {
-            margin: 5px 0;
-            text-align: left;
-            display: flex;
-            align-items: flex-start;
-            gap: 8px;
-            justify-content: flex-start;
-        }
-        .checkbox-item .number {
-            min-width: 30px;
-            flex-shrink: 0;
-        }
-        .checkbox-item input[type="checkbox"] {
-            flex-shrink: 0;
-            margin-top: 3px;
-        }
-        .checkbox-item label {
-            flex: 1;
-            font-family: 'Times New Roman', serif;
-            font-size: 24px;
-        }
-        button {
-            padding: 10px 20px;
-            font-size: 16px;
-            margin-top: 20px;
-        }
-        #result {
-            margin-top: 10px;
-            font-weight: bold;
-        }
-        #checkboxes{
-            text-align: left;
-        }
-        
-        /* Results page styles */
-        .results-page {
-            display: none;
-            text-align: center;
-            padding: 50px 20px;
-        }
-        .results-page.active {
-            display: block;
-        }
-        .score-label {
-            font-size: 24px;
-            color: #000000;
-            margin-bottom: 20px;
+            font-size: 18px;
         }
         .score-number {
-            font-size: 120px;
-            font-weight: bold;
-            color: #bb1414;
-            margin: 20px 0;
+            font-size: 80px;
         }
-        .made-by {
+        .checkbox-item label {
             font-size: 18px;
-            color: #000000;
-            margin-top: 50px;
         }
-        .back-button {
-            margin-top: 30px;
-        }
-        
-        .main-page.hidden {
-            display: none;
-        }
-    </style>
+    }
+</style>
 </head>
 <body>
     <div class="main-page" id="mainPage">
