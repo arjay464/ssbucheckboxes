@@ -9,12 +9,19 @@
     body {
         font-family: 'Times New Roman', serif;
         max-width: 800px;
-        margin: 20px auto;
+        margin: 20px 0;
         padding: 0 20px;
         background-color: #fdeec7;
         background-image: url('background.png');
         background-repeat: repeat;
         text-align: left;
+    }
+
+    .header-container {
+        max-width: 800px;
+        margin: 0 auto 20px auto; 
+        text-align: center;
+        padding: 0 20px;
     }
     
     h2 {
@@ -33,6 +40,8 @@
     
     #checkboxes {
         text-align: left;
+        padding: 0 20px;
+        max-width: none;
     }
     
     .checkbox-item {
@@ -65,10 +74,10 @@
         font-size: 24px;
     }
     
-    button {
+   button {
         padding: 10px 20px;
         font-size: 16px;
-        margin-top: 20px;
+        margin: 20px 0 0 20px;  /* Left aligned with checkboxes */
     }
     
     #result {
@@ -136,17 +145,19 @@
 </head>
 <body>
     <div class="main-page" id="mainPage">
+    <div class="header-container">
         <h2>SSBU Purity Test</h2>
         <h2> </h2>
         <div class="subtitle">THIS IS NOT A TO DO LIST. COMPLETION MAY RESULT IN YEARS OF THERAPY.</div>
         <div class="subtitle">Made by Arjay; Inspired by the Valorant Rice Purity Test</div>
-        
-        <div id="checkboxes">
-            <!-- Checkboxes will be generated here -->
-        </div>
-        
-        <button onclick="showResults()">Calculate My Score</button>
-        <div id="result"></div>
+    </div>
+    
+    <div id="checkboxes">
+        <!-- Checkboxes will be generated here -->
+    </div>
+    
+    <button onclick="showResults()">Calculate My Score</button>
+    <div id="result"></div>
     </div>
     
     <div class="results-page" id="resultsPage">
