@@ -158,6 +158,10 @@
         
         // Go back to main page
         function goBack() {
+            document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+                checkbox.checked = false;
+            });
+            
             document.getElementById('resultsPage').classList.remove('active');
             document.getElementById('mainPage').classList.remove('hidden');
             window.scrollTo(0, 0);
